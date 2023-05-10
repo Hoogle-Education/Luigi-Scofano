@@ -5,6 +5,8 @@ def ler_lista_na_linha():
     for i in range(len(lista)):
         lista[i] = int(lista[i])
 
+    return lista
+
 
 def ler_lista_por_elemento():
     lista = []
@@ -32,9 +34,23 @@ def criar_lista():
         exit()
 
 
+def atualiza_lista(lista):
+    exibir_lista(lista)
+    pos = int(input('digite a posicao do elemento a ser trocado: '))
+    novo_valor = int(input('digite o novo valor: '))
+    lista[pos] = novo_valor
+
+    return lista
+
+
+def exibir_lista(lista):
+    print('--------------------')
+    print(f'lista: {lista}')
+    print('--------------------')
+
+
 # CRUD: Create Read/Retrieve Update Delete
 lista = criar_lista()
-print(f'lista: {lista}')
 
 while True:
 
@@ -43,10 +59,15 @@ while True:
     R - para ler a lista armazenada
     U - para atualizar um elemento
     D - para deletar um elemento
-    0 - para sair do programa''')
+    0 - para sair do programa
+    digite uma opcao: ''').upper()
 
     if (opcao == '0'):
         break
 
-    if (opcao == 'C'):
+    if opcao == 'C':
         lista = criar_lista()
+    elif opcao == 'R':
+        exibir_lista(lista)
+    elif opcao == 'U':
+        lista = atualiza_lista(lista)
