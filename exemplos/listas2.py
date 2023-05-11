@@ -19,7 +19,7 @@ def ler_lista_por_elemento():
     return lista
 
 
-def criar_lista():
+def criar():
     opcao = int(input('''
     1 - Digitar a quantidade e o valores um abaixo do outro
     2 - Digitar todos os valores na mesma linha
@@ -34,12 +34,19 @@ def criar_lista():
         exit()
 
 
-def atualiza_lista(lista):
+def atualizar(lista):
     exibir_lista(lista)
     pos = int(input('digite a posicao do elemento a ser trocado: '))
     novo_valor = int(input('digite o novo valor: '))
     lista[pos] = novo_valor
 
+    return lista
+
+
+def deletar(lista):
+    exibir_lista(lista)
+    pos = int(input('digite a posicao do elemento a ser removido: '))
+    del lista[pos]
     return lista
 
 
@@ -50,7 +57,7 @@ def exibir_lista(lista):
 
 
 # CRUD: Create Read/Retrieve Update Delete
-lista = criar_lista()
+lista = criar()
 
 while True:
 
@@ -66,8 +73,10 @@ while True:
         break
 
     if opcao == 'C':
-        lista = criar_lista()
+        lista = criar()
     elif opcao == 'R':
         exibir_lista(lista)
     elif opcao == 'U':
-        lista = atualiza_lista(lista)
+        lista = atualizar(lista)
+    elif opcao == 'D':
+        lista = deletar(lista)
