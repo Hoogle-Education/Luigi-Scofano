@@ -1,0 +1,48 @@
+:root {
+  --white: #fff;
+  --black: #162328;
+  --green: #3fc060;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: red solid 1px; */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  color: var(--black);
+  font-weight: 500;
+  font-family: Inter, sans-serif;
+  font-size: 50px;
+  border-bottom: #162328 solid 2px;
+}
+
+.titleHighlight {
+  margin-left: 0.125em;
+  font-weight: 600;
+  color: var(--green)
+}
+
+
+/* header:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  padding: 20px 0px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+footer {
+  margin-top: 20px;
+} */
