@@ -38,13 +38,16 @@ public class App {
     public static int[] dp = new int[10000];
 
     public static int fibRecursivo(int n) {
-        if(dp[n] != -1) { // esta calculado
+        // caso dinamico - caso memorizado
+        if(dp[n] != -1) { 
             return dp[n];
         }
 
+        // caso base
         if(n==0) return dp[0] = 0;
         if(n==1) return dp[1] = 1;
 
+        // caso recursivo
         return dp[n] = fibRecursivo(n-1) + fibRecursivo(n-2);
     }
     
