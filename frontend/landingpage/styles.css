@@ -1,0 +1,61 @@
+/* 1 rem => 16px */
+
+* {
+  border: red 1px solid;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4.5rem;
+}
+
+.title {
+  font-family: 'Inter';
+  font-size: 3rem;
+}
+
+.landingText {
+  font-family: 'Open Sans';
+  font-size: 0.875rem;
+}
+
+.footer {
+  font-family: 'Open Sans';
+  font-size: 0.875rem;
+}
+
+.highlight {
+  color: #F90;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.landingImg {
+  width: 21.75rem;
+}
+
+.landingContent {
+  max-width: 32rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.5rem;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+ul > li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
